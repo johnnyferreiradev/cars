@@ -5,8 +5,6 @@
 [ext_resource path="res://jogo/RightBump.png" type="Texture" id=3]
 [ext_resource path="res://jogo/LeftBump.png" type="Texture" id=4]
 [ext_resource path="res://jogo/grass.png" type="Texture" id=5]
-[ext_resource path="res://jogo/CarRed.png" type="Texture" id=6]
-[ext_resource path="res://jogo/CarBlue.png" type="Texture" id=7]
 [ext_resource path="res://jogo/Building/B06.png" type="Texture" id=8]
 [ext_resource path="res://jogo/finish_border.svg" type="Texture" id=9]
 [ext_resource path="res://jogo/Building/B01.png" type="Texture" id=10]
@@ -16,6 +14,8 @@
 [ext_resource path="res://jogo/tree.png" type="Texture" id=14]
 [ext_resource path="res://jogo/Building/H01.png" type="Texture" id=15]
 [ext_resource path="res://jogo/Building/B05.png" type="Texture" id=16]
+[ext_resource path="res://jogo/SportsRacingCar_0.png" type="Texture" id=17]
+[ext_resource path="res://Carro.gd" type="Script" id=18]
 
 [node name="Main" type="Node"]
 
@@ -29,13 +29,13 @@ scale = Vector2( 0.768065, 0.735431 )
 texture = ExtResource( 5 )
 
 [node name="Grass4" type="Sprite" parent="Grama/Pista"]
-position = Vector2( 128.25, 557.25 )
-scale = Vector2( 0.590909, 0.658508 )
+position = Vector2( 127.5, 558.5 )
+scale = Vector2( 0.594406, 0.664336 )
 texture = ExtResource( 5 )
 
 [node name="Grass3" type="Sprite" parent="Grama/Pista"]
-position = Vector2( 265, 550 )
-scale = Vector2( 0.635198, 0.680653 )
+position = Vector2( 265.875, 552 )
+scale = Vector2( 0.639277, 0.689977 )
 texture = ExtResource( 5 )
 
 [node name="Grass2" type="Sprite" parent="Grama/Pista"]
@@ -58,119 +58,105 @@ position = Vector2( -23.7601, 415.357 )
 texture = ExtResource( 5 )
 
 [node name="Background-1" type="Sprite" parent="Grama/Pista"]
-position = Vector2( 202, 352 )
-scale = Vector2( 0.333333, 1.08308 )
+position = Vector2( 194, 350.999 )
+scale = Vector2( 0.280952, 1.08 )
 texture = ExtResource( 2 )
 
 [node name="LeftBump" type="Sprite" parent="Grama/Pista"]
-position = Vector2( 54.625, 351 )
+position = Vector2( 69, 350 )
 scale = Vector2( 0.36875, 1.17391 )
 texture = ExtResource( 4 )
 
 [node name="RightBump" type="Sprite" parent="Grama/Pista"]
-position = Vector2( 348.5, 352.001 )
+position = Vector2( 318, 352 )
 scale = Vector2( 0.333333, 1.17726 )
 texture = ExtResource( 3 )
+
+[node name="Carro" type="Node2D" parent="Grama/Pista"]
+script = ExtResource( 18 )
+
+[node name="SportsRacingCar0" type="Sprite" parent="Grama/Pista/Carro"]
+position = Vector2( 174.25, 630 )
+scale = Vector2( 0.867187, 0.90625 )
+texture = ExtResource( 17 )
 
 [node name="Predios" type="Node2D" parent="Grama"]
 
 [node name="B01" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 18, 103 )
+position = Vector2( 30, 77 )
 scale = Vector2( 0.19863, 0.217143 )
 texture = ExtResource( 10 )
 
-[node name="B02" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 6, 155 )
-scale = Vector2( 0.15358, 0.146934 )
-texture = ExtResource( 13 )
-
 [node name="B06" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 20, 208 )
+position = Vector2( 28, 132 )
 scale = Vector2( 0.179224, 0.193227 )
 texture = ExtResource( 8 )
 
 [node name="B07" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 12, 247 )
-scale = Vector2( 0.134527, 0.168367 )
+position = Vector2( 30, 180 )
+scale = Vector2( 0.118072, 0.198469 )
 texture = ExtResource( 11 )
 
 [node name="B04" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 14, 397 )
+position = Vector2( 31, 393 )
 scale = Vector2( 0.116628, 0.0950617 )
 texture = ExtResource( 12 )
 
 [node name="B01" type="Sprite" parent="Grama/Predios/B04"]
-position = Vector2( 60.0198, 557.532 )
+position = Vector2( 51.4456, 452.337 )
 scale = Vector2( 1.36134, 1.52189 )
 texture = ExtResource( 10 )
 
 [node name="B03" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 8, 503 )
-scale = Vector2( 0.139146, 0.134778 )
+position = Vector2( 30, 489 )
+scale = Vector2( 0.118072, 0.118129 )
 texture = ExtResource( 13 )
 
 [node name="B05" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 8, 576 )
+position = Vector2( 30, 545 )
 scale = Vector2( 0.190639, 0.147143 )
 texture = ExtResource( 10 )
 
 [node name="B08" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 396, 268 )
-scale = Vector2( 0.257991, 0.209343 )
+position = Vector2( 365, 266 )
+scale = Vector2( 0.206621, 0.166955 )
 texture = ExtResource( 16 )
 
 [node name="H01" type="Sprite" parent="Grama/Predios"]
-position = Vector2( 397, 321 )
-scale = Vector2( 0.256849, 0.230969 )
+position = Vector2( 367, 314 )
+scale = Vector2( 0.178653, 0.160467 )
 texture = ExtResource( 15 )
 
 [node name="Arvores" type="Node2D" parent="Grama"]
 
 [node name="Tree" type="Sprite" parent="Grama/Arvores"]
-position = Vector2( 377, 468 )
+position = Vector2( 367, 468 )
 texture = ExtResource( 14 )
 offset = Vector2( 0, -69 )
 
 [node name="Tree2" type="Sprite" parent="Grama/Arvores"]
-position = Vector2( 379, 438 )
+position = Vector2( 369, 441 )
 texture = ExtResource( 14 )
 
 [node name="Tree3" type="Sprite" parent="Grama/Arvores"]
-position = Vector2( 380, 213 )
+position = Vector2( 370, 213 )
 texture = ExtResource( 14 )
 
 [node name="Tree4" type="Sprite" parent="Grama/Arvores"]
-position = Vector2( 381, 167 )
+position = Vector2( 368, 173 )
 texture = ExtResource( 14 )
 
 [node name="Tree5" type="Sprite" parent="Grama/Arvores"]
-position = Vector2( 381, 130 )
+position = Vector2( 367, 131 )
 texture = ExtResource( 14 )
 
 [node name="Tree6" type="Sprite" parent="Grama/Arvores"]
-position = Vector2( 381, 90 )
+position = Vector2( 366, 90 )
 texture = ExtResource( 14 )
 
 [node name="Linha de Chegada" type="Node2D" parent="Grama"]
 
 [node name="FinishBorder" type="Sprite" parent="Grama/Linha de Chegada"]
-position = Vector2( 139, 27 )
+position = Vector2( 196, 15 )
+scale = Vector2( 2.51563, 0.515625 )
 texture = ExtResource( 9 )
-
-[node name="FinishBorder2" type="Sprite" parent="Grama/Linha de Chegada/FinishBorder"]
-position = Vector2( 64, 0 )
-texture = ExtResource( 9 )
-
-[node name="FinishBorder3" type="Sprite" parent="Grama/Linha de Chegada/FinishBorder"]
-position = Vector2( 128, 0 )
-texture = ExtResource( 9 )
-
-[node name="CarBlue" type="Sprite" parent="."]
-position = Vector2( 224, 639 )
-scale = Vector2( 0.384146, 0.528455 )
-texture = ExtResource( 7 )
-
-[node name="CarRed" type="Sprite" parent="."]
-position = Vector2( 177, 592 )
-scale = Vector2( 0.390244, 0.461382 )
-texture = ExtResource( 6 )
